@@ -31,7 +31,9 @@ try {
 Besides the input command, `miniexec` accepts a parameter object:
 
 ```ts
-const options = {
+import { miniexec, MiniExecOptions } from "https://deno.land/x/miniexec/mod.ts";
+
+const options: MiniExecOptions = {
   printOutput: false,
   shell: "/bin/sh",
 };
@@ -39,10 +41,10 @@ const options = {
 await miniexec("echo hello world", options);
 ```
 
-### `printOutput`
+**`options.printOutput`**
 
 By default, `miniexec` captures the stdout/stderr without printing it. Set `printOutput` to `true` to dump the output to stdoud/stderr (while still capturing it).
 
-### `shell`
+**`options.shell`**
 
 Specifies what shell is used. Default is `/bin/sh`.
