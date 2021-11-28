@@ -4,17 +4,17 @@ Minimalist approach to running shell commands in Deno.
 
 ## Usage
 
-Passing a shell command to `miniexec` runs it and captures its output:
+Pass a shell command to `miniexec` to run it and capture its output:
 
 ```ts
 import { miniexec } from "https://deno.land/x/miniexec/mod.ts";
 
 const output = await miniexec("echo hello world");
 
-console.log(output); // Logs "hello world";
+console.log(output); // "hello world"
 ```
 
-Wrap the miniexec call in a try & catch to handle command errors:
+Wrap the `miniexec` call in a try & catch to handle command errors:
 
 ```ts
 import { miniexec } from "https://deno.land/x/miniexec/mod.ts";
@@ -22,9 +22,13 @@ import { miniexec } from "https://deno.land/x/miniexec/mod.ts";
 try {
   await miniexec("cat i_do_not_exist.txt");
 } catch (err) {
-  console.error(err.message); // Logs "i_do_not_exist.txt: No such file or directory";
+  console.error(err.message); // "i_do_not_exist.txt: No such file or directory"
 }
 ```
+
+## Permission
+
+MiniExec requires [the `--allow-run` flag](https://deno.land/manual/getting_started/permissions#permissions-list) in order to run subprocesses.
 
 ## Options
 
