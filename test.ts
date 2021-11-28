@@ -35,7 +35,7 @@ Deno.test({
         return await miniexec("cat i_do_not_exist.txt");
       },
       Error,
-      "No such file or directory"
+      "No such file or directory",
     );
   },
   sanitizeResources: false,

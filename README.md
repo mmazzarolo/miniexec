@@ -28,7 +28,9 @@ try {
 
 ## Permission
 
-MiniExec requires [the `--allow-run` flag](https://deno.land/manual/getting_started/permissions#permissions-list) in order to run subprocesses.
+MiniExec requires
+[the `--allow-run` flag](https://deno.land/manual/getting_started/permissions#permissions-list)
+in order to run subprocesses.
 
 ## Options
 
@@ -47,7 +49,9 @@ await miniexec("echo hello world", options);
 
 **`options.printOutput`**
 
-By default, `miniexec` captures the stdout/stderr without printing it. Set `printOutput` to `true` to dump the output to stdoud/stderr (while still capturing it).
+By default, `miniexec` captures the stdout/stderr without printing it. Set
+`printOutput` to `true` to dump the output to stdoud/stderr (while still
+capturing it).
 
 **`options.shell`**
 
